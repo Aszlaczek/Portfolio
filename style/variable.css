@@ -1,0 +1,14 @@
+:root {
+  --color-white: #e6e6e6;
+  --color-black: #0f0f0f;
+  --color-first: #c5a880;
+  --color-second: #532e1c;
+  --font-xs: 12px;
+  --font-s: 18px;
+  --font-m: 24px;
+  --font-l: 28px;
+  --font-xl: 32px;
+  --time-1: 0.2s;
+  --time-2: 0.3s;
+  --time-3: 1s;
+}

@@ -1,0 +1,139 @@
+@import "./variable.css";
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 5px 0;
+  background-color: var(--color-second);
+  border-radius: 0 0 30px 30px;
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  place-items: center;
+  z-index: 1;
+}
+
+.list-item {
+  --border: 25px;
+  position: relative;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  place-items: center;
+  font-size: clamp(var(--font-xs), 2svw, var(--font-m));
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    border-radius: var(--border);
+    width: 0;
+    height: 3px;
+    background-color: var(--color-first);
+    transition: width ease-in-out var(--time-2);
+  }
+  &:has(button:hover) {
+    &:last-child {
+      &::after {
+        width: 0;
+      }
+    }
+    &::after {
+      width: 50%;
+    }
+  }
+  & > button {
+    font-size: inherit;
+    width: min-content;
+    padding: 5px 25px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    border-radius: var(--border);
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:last-child {
+    --size: 50px;
+    position: relative;
+    grid-column: 6/8;
+    border-radius: var(--size) 0 0 var(--size);
+    height: 150%;
+    background-color: var(--color-first);
+    & > button {
+      outline: 1px solid red;
+      width: 80%;
+      border-radius: var(--size);
+      background-color: var(--color-second);
+      border: 2px solid var(--color-white);
+      transition: scale ease-in-out var(--time-2);
+      padding: inherit inherit;
+      &:hover {
+        border: none;
+        scale: 1.2;
+        border: 2px solid var(--color-white);
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    height: 80%;
+    background-color: inherit;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    background-color: transparent;
+  }
+}
+
+.close {
+  animation: close ease-in-out var(--time-2);
+}
+
+.open {
+  animation: open ease-in-out var(--time-2);
+}
+
+.email {
+  --size: 100%;
+  position: absolute;
+  top: var(--size);
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--color-second);
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  color: inherit;
+  transition: all ease-in-out var(--time-2);
+  &:hover {
+    color: var(--color-first);
+    cursor: pointer;
+  }
+}

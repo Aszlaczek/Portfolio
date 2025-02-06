@@ -1,0 +1,30 @@
+@import "./home.css";
+@import "./variable.css";
+@import "./navbar.css";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Joan";
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-image: url("../assets/bg_2.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--color-white);
+  overflow-x: hidden;
+  &:not(.navigation) {
+    padding-inline: 1.5rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
