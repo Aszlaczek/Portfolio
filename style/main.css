@@ -20,9 +20,11 @@ body {
   background-size: cover;
   color: var(--color-white);
   overflow-x: hidden;
-  &:not(.navigation) {
-    padding-inline: 1.5rem;
-  }
+  padding-inline: 8svw;
+  height: 200svh;
+}
+
+@media (width < 750px) {
 }
 
 ::-webkit-scrollbar {

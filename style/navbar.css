@@ -4,30 +4,99 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  width: 100%;
+  width: clamp(250px, 100%, 120%);
   padding: 5px 0;
   background-color: var(--color-second);
   border-radius: 0 0 30px 30px;
+  transition: height ease-in-out var(--time-2);
+  box-shadow: 5px 5px 5px 2px var(--color-second);
 }
 
 .list {
   width: 100%;
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   place-items: center;
   z-index: 1;
+}
+
+@media (width < 750px) {
+  .navbar {
+    width: 20%;
+    position: fixed;
+    right: 5%;
+    height: 0;
+    top: 0;
+    box-shadow: none;
+  }
+  .list {
+    width: 0%;
+    overflow: hidden;
+    grid-template-columns: none;
+  }
+  .list-item:last-of-type {
+    grid-row: 7;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: transparent !important;
+  }
+}
+
+.showMenu {
+  overflow: visible;
+  width: 100%;
+  z-index: 1;
+  & > .list-item {
+    padding: 0;
+    height: auto;
+    & > button {
+      aspect-ratio: 3/1;
+    }
+    &:last-child {
+      grid-row: 6;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.openNav {
+  height: 50%;
+  z-index: 1;
+}
+
+.showList {
+  background-color: var(--color-first) !important;
+  color: var(--color-black) !important;
+}
+
+.btn-open {
+  position: inherit;
+  top: 2%;
+  right: 5%;
+  display: grid;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-second);
+  color: var(--color-white);
+  border: none;
+  place-items: center;
+  z-index: 10;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .list-item {
   --border: 25px;
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 80%;
   display: grid;
   place-items: center;
   font-size: clamp(var(--font-xs), 2svw, var(--font-m));
-
   &::after {
     content: "";
     position: absolute;
@@ -65,12 +134,11 @@
   &:last-child {
     --size: 50px;
     position: relative;
-    grid-column: 6/8;
-    border-radius: var(--size) 0 0 var(--size);
-    height: 150%;
+    border-radius: var(--size) 0 var(--size) var(--size);
+    height: 200%;
+    width: 150%;
     background-color: var(--color-first);
     & > button {
-      outline: 1px solid red;
       width: 80%;
       border-radius: var(--size);
       background-color: var(--color-second);
@@ -115,16 +183,16 @@
 }
 
 .open {
-  animation: open ease-in-out var(--time-2);
+  animation: open ease-in-out var(--time-2) forwards;
 }
 
 .email {
   --size: 100%;
   position: absolute;
+  opacity: 0;
   top: var(--size);
   left: 10%;
-  width: 80%;
-  height: 100%;
+  padding: 5px 20px;
   border-radius: 20px;
   background-color: var(--color-second);
   display: grid;
