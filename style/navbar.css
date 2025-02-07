@@ -47,6 +47,9 @@
     height: 100% !important;
     width: 100% !important;
     background-color: transparent !important;
+    &::before {
+      border-radius: 0 0 20px 20px;
+    }
     button {
       padding-inline: 0 !important;
     }
@@ -221,11 +224,11 @@
   }
   &::before {
     height: 105% !important;
-    z-index: 1;
+    z-index: -1;
     background-color: var(--color-first);
     color: var(--color-black);
     border-color: var(--color-black);
-    border-radius: 0 0 20px 20px;
+    border-radius: inherit;
   }
 }
 
