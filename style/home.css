@@ -3,9 +3,8 @@
 .home {
   margin-top: 25px;
   width: 100%;
-  /* outline: 5px solid red; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 35%;
   padding: 0.75rem;
 }
 
@@ -13,7 +12,7 @@
   --border: 20px;
   --padding: 50px;
   position: relative;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
   border-radius: var(--border);
   z-index: 1;
   text-align: center;
@@ -35,12 +34,12 @@
   &::before {
     content: "";
     position: absolute;
-    width: 15svw;
+    width: 12svw;
     aspect-ratio: 1;
     border-radius: 50%;
     background: var(--color-first);
     bottom: calc(var(--padding) * -0.75);
-    right: calc(var(--padding) * -1.75);
+    right: calc(var(--padding) * -0.75);
   }
 }
 
@@ -50,13 +49,13 @@
   width: 100%;
   place-items: center;
   grid-template-rows: repeat(2, min-content);
-  gap: 50px;
-  font-size: clamp(var(--font-xs), 2svw, var(--font-xl));
+  gap: 25px;
+  font-size: clamp(var(--font-xs), 2svw, var(--font-m));
   & > h1 {
     text-shadow: 5px 5px 2px var(--color-black);
   }
   & > p {
-    font-size: clamp(var(--font-xs), 2svw, var(--font-m));
+    font-size: clamp(var(--font-xs), 2svw, var(--font-s));
     padding-inline: 0.5rem;
   }
 }
@@ -100,6 +99,7 @@
 @media (width < 750px) {
   .home {
     grid-template-columns: 1fr;
+    width: 100%;
   }
   .home-left {
     padding: 10px;

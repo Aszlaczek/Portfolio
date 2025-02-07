@@ -8,36 +8,44 @@ emailPop.innerHTML = "awzorek23@wp.pl";
 emailPop.classList.add("email");
 emailPop.href = "mailto:awzorek23@wp.pl";
 
-const openButton = document.createElement("button");
-openButton.textContent = "Open";
-openButton.classList.add("btn-open");
+// const checkPart = (name) =>{
+//   screen.
+// }
 
-openButton.addEventListener("click", () => {
-  openButton.classList.toggle("showList");
-  if (openButton.classList.contains("showList")) {
-    openButton.innerText = "Close";
+function showNavigation(item) {
+  item.classList.toggle("showList");
+  if (item.classList.contains("showList")) {
+    item.innerText = "Close";
     fullList[0].classList.add("showMenu");
     navbar.classList.add("openNav");
   } else {
-    openButton.innerText = "Open";
+    item.innerText = "Open";
     fullList[0].classList.remove("showMenu");
     navbar.classList.remove("openNav");
   }
-});
+}
 
-const showOpen = () => {
-  if (window.innerWidth < 750) {
-    navbar.hasChildNodes(openButton) ? navbar.appendChild(openButton) : "";
-  } else {
-    navbar.hasChildNodes(openButton) ? navbar.removeChild(openButton) : "";
+function removeOpenButton() {
+  if (window.innerWidth > 750) {
+    const openButton = document.querySelector(".btn-open");
+    if (openButton) {
+      openButton.remove();
+    }
+  }
+}
+const createOpenButton = () => {
+  if (window.innerWidth < 750 && !document.querySelector(".btn-open")) {
+    const openButton = document.createElement("button");
+    openButton.textContent = "Open";
+    openButton.classList.add("btn-open");
+    openButton.addEventListener("click", () => showNavigation(openButton));
+    navbar.appendChild(openButton);
   }
 };
-window.onload = () => showOpen();
-window.onresize = () => showOpen();
 
 function showEmail() {
-  contactButton.classList.toggle("show");
-  if (contactButton.classList.contains("show")) {
+  contactButton.classList.toggle("showEmail");
+  if (contactButton.classList.contains("showEmail")) {
     emailPop.classList.add("open");
     setTimeout(() => {
       contactButton.appendChild(emailPop);
@@ -50,5 +58,11 @@ function showEmail() {
     }, 200);
   }
 }
+
+window.addEventListener("load", createOpenButton);
+window.addEventListener("resize", () => {
+  removeOpenButton();
+  createOpenButton();
+});
 
 contactButton.children[0].addEventListener("click", showEmail);
