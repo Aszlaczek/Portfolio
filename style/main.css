@@ -15,6 +15,10 @@ ul {
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../assets/bg_2.png");
   background-position: center;
@@ -23,9 +27,6 @@ body {
   overflow-x: hidden;
   padding-inline: 8svw;
   height: 200svh;
-}
-
-@media (width < 750px) {
 }
 
 ::-webkit-scrollbar {

@@ -1,16 +1,26 @@
-const listOfButtons = document.getElementsByClassName("list-item");
-const contactButton = listOfButtons.item(listOfButtons.length - 1);
+const listOfListItems = document.getElementsByClassName("list-item");
+const listOfLinks = document.getElementsByTagName("a");
+const contactButton = listOfListItems.item(listOfListItems.length - 1);
 const navbar = document.getElementById("navigation");
 const fullList = document.getElementsByTagName("ul");
-
+const home = document.getElementById("home");
 const emailPop = document.createElement("a");
 emailPop.innerHTML = "awzorek23@wp.pl";
 emailPop.classList.add("email");
 emailPop.href = "mailto:awzorek23@wp.pl";
 
-// const checkPart = (name) =>{
-//   screen.
-// }
+for (let i = 0; i < listOfLinks.length; i++) {
+  listOfLinks[i].addEventListener("click", () => toggleActiveClass(i));
+}
+
+function toggleActiveClass(element) {
+  for (let i = 0; i < listOfLinks.length; i++) {
+    if (listOfListItems[i].classList.contains("active")) {
+      listOfListItems[i].classList.remove("active");
+    }
+  }
+  listOfListItems[element].classList.add("active");
+}
 
 function showNavigation(item) {
   item.classList.toggle("showList");

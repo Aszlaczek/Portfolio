@@ -143,39 +143,24 @@
   place-items: center;
   font-size: clamp(var(--font-xs), 2svw, var(--font-m));
   animation: openList ease-in-out 1s calc(var(--item) * 0.12s) forwards;
+  & > a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color ease-in-out var(--time-1);
+    &:hover {
+      color: var(--color-first);
+    }
+  }
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 25%;
+    left: 0%;
     border-radius: var(--border);
-    width: 0;
+    width: 0%;
     height: 3px;
     background-color: var(--color-first);
     transition: width ease-in-out var(--time-2);
-  }
-  &:has(button:hover) {
-    &:last-child {
-      &::after {
-        width: 0;
-      }
-    }
-    &::after {
-      width: 50%;
-    }
-  }
-  & > button {
-    font-size: inherit;
-    width: min-content;
-    padding: 5px 25px;
-    background-color: transparent;
-    border: none;
-    color: var(--color-white);
-    border-radius: var(--border);
-    text-align: center;
-    &:hover {
-      cursor: pointer;
-    }
   }
   &:last-child {
     --size: 50px;
@@ -194,6 +179,10 @@
       transition: all var(--time-2) ease-in-out;
     }
     & > button {
+      text-align: center;
+      font-size: inherit;
+      padding: 5px 25px;
+      color: var(--color-white);
       width: 80%;
       border-radius: var(--size);
       background-color: var(--color-second);
@@ -201,6 +190,7 @@
       transition: border, scale ease-in-out var(--time-2);
       @media (hover) {
         &:hover {
+          cursor: pointer;
           border: none;
           scale: 1.2;
           border: 2px solid var(--color-white);
@@ -208,6 +198,10 @@
       }
     }
   }
+}
+
+.list-item a.active::after {
+  width: 50%;
 }
 
 @keyframes open {
@@ -274,5 +268,14 @@
   &:hover {
     color: var(--color-first);
     cursor: pointer;
+  }
+}
+
+.active {
+  a {
+    color: var(--color-first);
+  }
+  &::after {
+    width: 100%;
   }
 }
