@@ -33,6 +33,7 @@ function removeOpenButton() {
     }
   }
 }
+
 const createOpenButton = () => {
   if (window.innerWidth < 750 && !document.querySelector(".btn-open")) {
     const openButton = document.createElement("button");
