@@ -10,6 +10,7 @@
   box-sizing: border-box;
   font-family: "Joan";
   /* outline: 1px solid red; */
+  interpolate-size: allow-keywords;
 }
 
 ul {
@@ -27,7 +28,6 @@ body {
   color: var(--color-white);
   overflow-x: hidden;
   padding-inline: 8svw;
-  /* height: 200svh; */
 }
 
 ::-webkit-scrollbar {

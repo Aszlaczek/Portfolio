@@ -5,8 +5,8 @@
     height: 0;
     opacity: 0;
   }
-  95% {
-    height: 5svh;
+  100% {
+    height: auto;
   }
 }
 @keyframes openList {
@@ -18,6 +18,8 @@
 .navbar {
   animation: openNav ease-in-out 0.8s;
   position: sticky;
+  display: grid;
+  grid-template-columns: 80% 1fr;
   top: 0;
   z-index: 100;
   width: clamp(250px, 100%, 120%);
@@ -26,12 +28,21 @@
   border-radius: 0 0 30px 30px;
   transition: height ease-in-out var(--time-2);
   box-shadow: 5px 5px 5px 2px var(--color-second);
+  &.expanded {
+    height: auto;
+    overflow: visible;
+
+    .list {
+      height: auto;
+    }
+  }
 }
 
 .list {
   width: 100%;
   display: grid;
   height: 100%;
+  overflow: hidden;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   place-items: center;
   z-index: 1;
@@ -47,39 +58,106 @@
     right: 10%;
     height: 0;
     box-shadow: none;
+    grid-template-columns: 1fr;
     animation: openList 1s ease-in-out forwards;
+    overflow: hidden;
+    &.openNav {
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+    }
+    .contact-box {
+      font-size: inherit;
+      border: none;
+      border-radius: 0 0 30px 30px;
+      height: 120%;
+      &.showMail {
+        a {
+          opacity: 0;
+          top: auto;
+          display: grid;
+          place-items: center;
+        }
+        grid-template-rows: 1fr 1fr;
+        overflow: visible;
+        border-radius: 0 0 5px 5px;
+      }
+    }
   }
   .list {
     transition: all 1s ease-in-out;
     width: 100%;
     overflow: hidden;
     grid-template-columns: none;
-    grid-template-rows: repeat(6, 1fr);
     place-items: center;
     gap: 2px;
-    font-size: clamp(2px, 10svh - 1rem, 10px) !important;
+    font-size: clamp(2px, 10svh - 1rem, 10px);
     & > .list-item {
       width: 100%;
+      padding: 5px 0px;
+      &::after {
+        height: 2px;
+      }
       button {
         padding: 2px 10px;
       }
     }
   }
-  .list-item:last-of-type {
-    grid-row: 7;
-    width: 100% !important;
-    background-color: transparent !important;
-    &::before {
-      border-radius: 0 0 20px 20px;
+}
+.contact-box {
+  --size: 50px;
+  position: relative;
+  border-radius: var(--size) 0 var(--size) var(--size);
+  width: 100%;
+  background-color: var(--color-first);
+  border: 10px solid var(--color-first);
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 0fr;
+  overflow: hidden;
+  transition: all ease-in-out var(--time-2);
+  font-size: inherit;
+  &:has(button:hover) {
+    overflow: visible;
+  }
+  &.showMail {
+    grid-template-rows: 1fr;
+    overflow: visible;
+    font-size: inherit;
+    a {
+      opacity: 0;
+      top: 100%;
+      font-size: 2.5svw;
+      text-shadow: var(--color-black) 1px 1px 1px;
+      animation: openList ease-in-out var(--time-2) forwards;
     }
-    button {
-      padding: 0 5px !important;
-      height: auto;
+    & > button {
+      background-color: var(--color-first);
+      border-color: var(--color-second);
+      color: var(--color-black);
     }
   }
-  .email {
-    top: 120% !important;
-    padding: 0px 10px !important;
+  &:has(button.showMail) {
+    overflow: visible;
+  }
+  & > button {
+    text-align: center;
+    padding: 5px;
+    color: var(--color-white);
+    width: 80%;
+    font-size: clamp(8px, 2vw, var(--font-m));
+    border-radius: var(--size);
+    background-color: var(--color-second);
+    border: 2px solid var(--color-white);
+    transition: all ease-in-out var(--time-2);
+    @media (hover) {
+      &:hover {
+        cursor: pointer;
+        border: none;
+        scale: 1.2;
+        border: 2px solid var(--color-white);
+      }
+    }
   }
 }
 
@@ -102,14 +180,8 @@
 }
 
 .openNav {
-  height: 28svh;
+  height: auto;
   z-index: 1;
-}
-
-.showList {
-  background-color: var(--color-first) !important;
-  color: var(--color-black) !important;
-  border: 1px solid var(--color-black) !important;
 }
 
 .btn-open {
@@ -134,6 +206,12 @@
   }
 }
 
+.btn-open.expanded {
+  background-color: var(--color-first);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
 .list-item {
   --border: 25px;
   position: relative;
@@ -146,7 +224,7 @@
   & > a {
     color: var(--color-white);
     text-decoration: none;
-    transition: color ease-in-out var(--time-1);
+    transition: all ease-in-out var(--time-1);
     &:hover {
       color: var(--color-first);
     }
@@ -162,42 +240,6 @@
     background-color: var(--color-first);
     transition: width ease-in-out var(--time-2);
   }
-  &:last-child {
-    --size: 50px;
-    position: relative;
-    border-radius: var(--size) 0 var(--size) var(--size);
-    height: 200%;
-    width: 150%;
-    background-color: var(--color-first);
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 0px;
-      left: 0;
-      top: 0;
-      transition: all var(--time-2) ease-in-out;
-    }
-    & > button {
-      text-align: center;
-      font-size: inherit;
-      padding: 5px 25px;
-      color: var(--color-white);
-      width: 80%;
-      border-radius: var(--size);
-      background-color: var(--color-second);
-      border: 2px solid var(--color-white);
-      transition: border, scale ease-in-out var(--time-2);
-      @media (hover) {
-        &:hover {
-          cursor: pointer;
-          border: none;
-          scale: 1.2;
-          border: 2px solid var(--color-white);
-        }
-      }
-    }
-  }
 }
 
 .list-item a.active::after {
@@ -211,7 +253,7 @@
   }
   100% {
     opacity: 0.7;
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -236,39 +278,14 @@
   animation: open ease-in-out var(--time-2) forwards;
 }
 
-.showEmail {
-  button {
-    background-color: transparent !important;
-    color: var(--color-black) !important;
-    border-color: var(--color-black) !important;
-  }
-  &::before {
-    height: 150% !important;
-    z-index: -1;
-    background-color: var(--color-first);
-    color: var(--color-black);
-    border-color: var(--color-black);
-    border-radius: inherit;
-  }
-}
-
 .email {
-  --size: 100%;
+  /* background-color: red; */
+  font-size: clamp(2px, 1vw, var(--font-s));
   position: absolute;
-  opacity: 0;
-  top: var(--size);
-  left: inherit;
-  padding: 5px 25px;
-  border-radius: 20px;
-  background-color: var(--color-second);
-  display: grid;
-  place-items: center;
-  z-index: 1;
-  color: inherit;
-  &:hover {
-    color: var(--color-first);
-    cursor: pointer;
-  }
+  bottom: 10%;
+  text-align: center;
+  color: white;
+  font-size: inherit;
 }
 
 .active {
