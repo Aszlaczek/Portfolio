@@ -3,7 +3,8 @@ const listOfLinks = document.getElementsByTagName("a");
 const contactButton = listOfListItems.item(listOfListItems.length - 1);
 const navbar = document.getElementById("navigation");
 const fullList = document.getElementsByTagName("ul");
-const home = document.getElementById("home");
+const listOfSections = $("section");
+const about = document.getElementById("about");
 const emailPop = document.createElement("a");
 emailPop.innerHTML = "awzorek23@wp.pl";
 emailPop.classList.add("email");
@@ -70,10 +71,47 @@ function showEmail() {
   }
 }
 
+const removeActive = (id) => {
+  for (let i of listOfListItems) {
+    if (i.classList.contains("active") && i !== id) {
+      i.classList.remove("active");
+    }
+  }
+};
+
+function checkMainPage() {
+  const validNumber = window.innerWidth > 750 ? 100 : 50;
+  if (listOfSections[0].getBoundingClientRect().top <= validNumber) {
+    removeActive(0);
+    listOfListItems[0].classList.add("active");
+  }
+  if (listOfSections[1].getBoundingClientRect().top <= validNumber) {
+    removeActive(1);
+    listOfListItems[1].classList.add("active");
+  }
+  if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
+    removeActive(2);
+    listOfListItems[2].classList.add("active");
+  }
+  if (listOfSections[3].getBoundingClientRect().top <= validNumber) {
+    removeActive(3);
+    listOfListItems[3].classList.add("active");
+  }
+  if (listOfSections[4].getBoundingClientRect().bottom <= validNumber) {
+    removeActive(4);
+    listOfListItems[4].classList.add("active");
+  }
+  console.log(listOfSections[4].getBoundingClientRect().bottom);
+}
+
+console.log(listOfSections);
 window.addEventListener("load", createOpenButton);
 window.addEventListener("resize", () => {
   removeOpenButton();
   createOpenButton();
+});
+window.addEventListener("scroll", () => {
+  checkMainPage();
 });
 
 contactButton.children[0].addEventListener("click", showEmail);
