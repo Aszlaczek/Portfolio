@@ -1,5 +1,5 @@
 const listOfListItems = document.getElementsByClassName("list-item");
-const listOfLinks = $("a");
+const listOfLinks = document.querySelector("a");
 const contactButton = document.getElementById("contact-btn");
 const navbar = document.getElementById("navigation");
 const fullList = document.getElementsByTagName("ul");
