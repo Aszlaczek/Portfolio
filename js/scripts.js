@@ -60,7 +60,7 @@ const removeActive = (id) => {
 };
 
 function checkMainPage() {
-  const validNumber = window.innerWidth > 750 ? 100 : 50;
+  const validNumber = window.innerWidth > 750 ? 200 : 100;
   if (listOfSections[0].getBoundingClientRect().top <= validNumber) {
     removeActive(0);
     listOfListItems[0].classList.add("active");
