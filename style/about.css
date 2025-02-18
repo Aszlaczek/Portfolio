@@ -1,6 +1,5 @@
 #about {
   width: 100%;
-  /* outline: 1px solid blue; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -56,7 +55,7 @@
 @media (max-width: 750px) {
   #about {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 0rem;
     grid-template-rows: 5% 1fr 1fr;
     place-items: center;
     & > h1 {

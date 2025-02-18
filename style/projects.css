@@ -1,0 +1,134 @@
+@import url("./variable.css");
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+
+  & > h1 {
+    grid-column: 1/3;
+  }
+}
+
+.projects-left {
+  grid-column: 1;
+  /* outline: 1px solid blue; */
+}
+
+.projects-list {
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  &:hover > .project-item {
+    opacity: 0.5;
+  }
+}
+
+.project-item {
+  height: min-content;
+  transition: all var(--time-2);
+  &:hover {
+    scale: 1.1;
+    opacity: 1 !important;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:nth-child(even) {
+    margin-top: 2.5rem;
+  }
+  img {
+    border-radius: 20px;
+  }
+}
+
+.projects-right {
+  grid-column: 2;
+  display: grid;
+
+  & > .container-desk {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      grid-row: 1;
+      width: 100%;
+      height: 40%;
+      bottom: 18%;
+      left: -1%;
+      z-index: -2;
+      background-color: var(--color-first);
+      border-radius: 100%;
+      clip-path: polygon(20% 0%, 85% 0%, 100% 100%, 0% 100%);
+      opacity: 0.5;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.content {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  display: grid;
+  text-align: center;
+  place-items: center;
+  grid-template-columns: 1fr min-content;
+  place-self: start center;
+  & > p {
+    width: 100%;
+  }
+  a {
+    width: clamp(25px, 5svw - 1rem, 50px);
+  }
+
+  a:hover {
+    svg {
+      fill: var(--color-white);
+      scale: 1.2;
+    }
+  }
+
+  svg {
+    width: inherit;
+    transition: fill var(--time-2), scale var(--time-2);
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  #projects {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .projects-left {
+    grid-row: 2;
+    width: 100%;
+  }
+  .projects-list {
+    place-items: center;
+  }
+  .project-item {
+    outline: 1px solid red;
+    img {
+      width: 100%;
+    }
+  }
+  .projects-right {
+    grid-column: 1;
+  }
+  .content {
+    width: 90%;
+    bottom: 80%;
+  }
+}

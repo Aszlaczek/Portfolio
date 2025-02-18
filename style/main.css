@@ -2,6 +2,9 @@
 @import "./home.css";
 @import "./variable.css";
 @import "./about.css";
+@import "./projects.css";
+@import "./experience.css";
+
 *,
 *::after,
 *::before {
@@ -18,6 +21,7 @@ ul {
 }
 
 html {
+  scroll-padding: 5rem;
   scroll-behavior: smooth;
 }
 
@@ -75,10 +79,8 @@ section {
   height: auto;
 }
 
-@media (width < 750) {
-  section {
-    background-color: red;
-  }
+@media (max-width: 750px) {
+  /* section {} */
   p {
     padding: 0;
   }
