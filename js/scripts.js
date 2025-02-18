@@ -52,9 +52,10 @@ const createOpenButton = () => {
 };
 
 const removeActive = (id) => {
-  for (let i of listOfListItems) {
-    if (i.classList.contains("active") && i !== id) {
-      i.classList.remove("active");
+  for (let i = 0; i < listOfListItems.length; i++) {
+    if (listOfListItems[i].classList.contains("active") && i !== id) {
+      listOfListItems[i].classList.remove("active");
+      listOfSections[i].querySelector("h1").classList.remove("active-header");
     }
   }
 };
@@ -64,22 +65,28 @@ function checkMainPage() {
   if (listOfSections[0].getBoundingClientRect().top <= validNumber) {
     removeActive(0);
     listOfListItems[0].classList.add("active");
+    listOfSections[0].querySelectorAll("h1")[0].classList.add("active-header");
+    listOfSections[0].querySelectorAll("h1")[1].classList.add("active-header");
   }
   if (listOfSections[1].getBoundingClientRect().top <= validNumber) {
     removeActive(1);
     listOfListItems[1].classList.add("active");
+    listOfSections[1].querySelector("h1").classList.add("active-header");
   }
   if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
     removeActive(2);
     listOfListItems[2].classList.add("active");
+    listOfSections[2].querySelector("h1").classList.add("active-header");
   }
   if (listOfSections[3].getBoundingClientRect().top <= validNumber) {
     removeActive(3);
     listOfListItems[3].classList.add("active");
+    listOfSections[3].querySelector("h1").classList.add("active-header");
   }
   if (listOfSections[4].getBoundingClientRect().bottom <= validNumber) {
     removeActive(4);
     listOfListItems[4].classList.add("active");
+    listOfSections[4].querySelector("h1").classList.add("active-header");
   }
 }
 
