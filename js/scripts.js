@@ -67,21 +67,31 @@ function checkMainPage() {
     listOfListItems[0].classList.add("active");
     listOfSections[0].querySelectorAll("h1")[0].classList.add("active-header");
     listOfSections[0].querySelectorAll("h1")[1].classList.add("active-header");
+    listOfSections[0].querySelector(".home-left").classList.add("showUp");
+    listOfSections[0].querySelector(".home-right").classList.add("showSide");
   }
   if (listOfSections[1].getBoundingClientRect().top <= validNumber) {
     removeActive(1);
     listOfListItems[1].classList.add("active");
     listOfSections[1].querySelector("h1").classList.add("active-header");
+    listOfSections[1].querySelector(".about-left").classList.add("showUp");
+    listOfSections[1].querySelector(".about-right").classList.add("showSide");
   }
   if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
     removeActive(2);
     listOfListItems[2].classList.add("active");
     listOfSections[2].querySelector("h1").classList.add("active-header");
+    listOfSections[2].querySelector(".projects-left").classList.add("showUp");
+    listOfSections[2]
+      .querySelector(".projects-right")
+      .classList.add("showSide");
   }
   if (listOfSections[3].getBoundingClientRect().top <= validNumber) {
     removeActive(3);
     listOfListItems[3].classList.add("active");
     listOfSections[3].querySelector("h1").classList.add("active-header");
+    listOfSections[3].querySelector(".ability-left").classList.add("showUp");
+    listOfSections[3].querySelector(".ability-right").classList.add("showSide");
   }
   if (listOfSections[4].getBoundingClientRect().bottom <= validNumber) {
     removeActive(4);

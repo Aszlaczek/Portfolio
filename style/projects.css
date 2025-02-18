@@ -12,7 +12,6 @@
 
 .projects-left {
   grid-column: 1;
-  /* outline: 1px solid blue; */
 }
 
 .projects-list {
@@ -49,7 +48,6 @@
 .projects-right {
   grid-column: 2;
   display: grid;
-
   & > .container-desk {
     width: 100%;
     height: 100%;

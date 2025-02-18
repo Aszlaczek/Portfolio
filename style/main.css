@@ -77,6 +77,33 @@ img {
   scale: 1.2;
 }
 
+@keyframes showContentUp {
+  0% {
+    translate: 0 200px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showContentSide {
+  0% {
+    translate: -200px 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.showUp {
+  animation: showContentUp var(--time-3);
+}
+
+.showSide {
+  animation: showContentSide var(--time-3);
+}
+
 section {
   padding: 2rem;
   margin-block: 180px;
