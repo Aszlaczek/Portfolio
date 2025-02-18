@@ -12,7 +12,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Joan";
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   interpolate-size: allow-keywords;
 }
 
