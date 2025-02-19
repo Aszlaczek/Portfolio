@@ -130,7 +130,6 @@
     place-items: center;
   }
   .project-item {
-    outline: 1px solid red;
     img {
       width: 100%;
     }
