@@ -3,7 +3,8 @@
 @import "./variable.css";
 @import "./about.css";
 @import "./projects.css";
-@import "./experience.css";
+@import "./abilities.css";
+@import "./cv.css";
 
 *,
 *::after,
@@ -26,13 +27,13 @@ html {
 }
 
 body {
-  background: linear-gradient(var(--color-first), var(--color-second));
-  background-position: center;
-  background-repeat: repeat;
   color: var(--color-white);
   overflow-x: hidden;
   padding-inline: var(--main-padding);
   position: relative;
+  background: linear-gradient(var(--color-first), var(--color-second));
+  background-position: center;
+  background-repeat: repeat;
   &::after {
     content: "";
     position: absolute;
@@ -75,6 +76,11 @@ img {
 .active-header {
   color: var(--color-first);
   scale: 1.2;
+}
+
+footer {
+  width: 100%;
+  height: 10svh;
 }
 
 @keyframes showContentUp {

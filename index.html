@@ -39,7 +39,7 @@
     </nav>
     <div class="main-container">
       <section id="home" class="home">
-        <div class="home-left showUp">
+        <div class="home-left">
           <div class="context">
             <h1>Who am I ?</h1>
             <p>
@@ -54,7 +54,7 @@
             </p>
           </div>
         </div>
-        <div class="home-right card showSide">
+        <div class="home-right card">
           <div class="card-head">
             <img
               src="./assets/(Essential) - Avatars accounts boy.png"
@@ -181,7 +181,60 @@
           </div>
         </div>
       </section>
-      <section id="cv"></section>
+      <section id="cv">
+        <h1>Curriculum Vitae</h1>
+        <div class="cv-left">
+          <a
+            href="./assets/Adrian_Wzorek_CV.pdf"
+            download="Adrian_Wzorek_CV.pdf"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+              >
+                <path
+                  d="m6 22h12c1.1046 0 2-.8954 2-2v-10.17157c0-.53044-.2107-1.03914-.5858-1.41422l-5.8284-5.82842c-.3751-.37508-.8838-.58579-1.4142-.58579h-6.1716c-1.10457 0-2 .89543-2 2v16c0 1.1046.89543 2 2 2z"
+                />
+                <path d="m13 2.5v6.5h6" />
+                <path d="m8 17h7" />
+                <path d="m8 13h7" />
+                <path d="m8 9h1" />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="cv-right">
+          <h1>Write me back</h1>
+          <form action="https://api.web3forms.com/submit" method="post">
+            <input
+              type="hidden"
+              name="access_key"
+              value="09fd9ecf-de99-4bde-9afe-f894041b1a22"
+            />
+            <div class="email-form">
+              <label for="email-input">Email</label>
+              <input type="email" name="email" id="email-input" required />
+            </div>
+            <div class="title-form">
+              <label for="title-input">Title</label>
+              <input type="text" name="title" id="title-input" required />
+            </div>
+            <div class="context-form">
+              <label for="context-input">Content</label>
+              <textarea name="context" id="context-input"></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <footer id="footer"></footer>
     </div>
   </body>
   <script src="./js/jquery-3.7.1.min.map"></script>

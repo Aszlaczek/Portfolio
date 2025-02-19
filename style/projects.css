@@ -26,9 +26,22 @@
   }
 }
 
+@keyframes openProject {
+  0% {
+    rotate: -180deg;
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 .project-item {
   height: min-content;
   transition: all var(--time-2);
+
   &:hover {
     scale: 1.1;
     opacity: 1 !important;

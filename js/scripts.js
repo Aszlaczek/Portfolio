@@ -60,43 +60,51 @@ const removeActive = (id) => {
   }
 };
 
+const addAnimation = (id, section) => {
+  if (!listOfSections[id].getAttribute("aria-haspopup")) {
+    listOfSections[id]
+      .querySelector(`.${section}-left`)
+      .classList.add("showSide");
+    listOfSections[id]
+      .querySelector(`.${section}-right`)
+      .classList.add("showUp");
+    listOfSections[id].setAttribute("aria-haspopup", "true");
+  }
+};
+
 function checkMainPage() {
-  const validNumber = window.innerWidth > 750 ? 200 : 100;
+  const validNumber = window.innerWidth > 750 ? 450 : 300;
   if (listOfSections[0].getBoundingClientRect().top <= validNumber) {
     removeActive(0);
+    addAnimation(0, "home");
     listOfListItems[0].classList.add("active");
     listOfSections[0].querySelectorAll("h1")[0].classList.add("active-header");
     listOfSections[0].querySelectorAll("h1")[1].classList.add("active-header");
-    listOfSections[0].querySelector(".home-left").classList.add("showUp");
-    listOfSections[0].querySelector(".home-right").classList.add("showSide");
   }
   if (listOfSections[1].getBoundingClientRect().top <= validNumber) {
     removeActive(1);
     listOfListItems[1].classList.add("active");
     listOfSections[1].querySelector("h1").classList.add("active-header");
-    listOfSections[1].querySelector(".about-left").classList.add("showUp");
-    listOfSections[1].querySelector(".about-right").classList.add("showSide");
+    addAnimation(1, "about");
   }
   if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
     removeActive(2);
     listOfListItems[2].classList.add("active");
     listOfSections[2].querySelector("h1").classList.add("active-header");
-    listOfSections[2].querySelector(".projects-left").classList.add("showUp");
-    listOfSections[2]
-      .querySelector(".projects-right")
-      .classList.add("showSide");
+    addAnimation(2, "projects");
   }
   if (listOfSections[3].getBoundingClientRect().top <= validNumber) {
     removeActive(3);
     listOfListItems[3].classList.add("active");
     listOfSections[3].querySelector("h1").classList.add("active-header");
-    listOfSections[3].querySelector(".ability-left").classList.add("showUp");
-    listOfSections[3].querySelector(".ability-right").classList.add("showSide");
+    addAnimation(3, "ability");
   }
-  if (listOfSections[4].getBoundingClientRect().bottom <= validNumber) {
+  if (listOfSections[4].getBoundingClientRect().top <= validNumber) {
     removeActive(4);
     listOfListItems[4].classList.add("active");
-    listOfSections[4].querySelector("h1").classList.add("active-header");
+    listOfSections[4].querySelectorAll("h1")[0].classList.add("active-header");
+    listOfSections[4].querySelectorAll("h1")[1].classList.add("active-header");
+    addAnimation(4, "cv");
   }
 }
 

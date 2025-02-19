@@ -44,6 +44,7 @@
       transition: all var(--time-2);
       opacity: 1;
       scale: 1;
+      padding: 0.2rem;
     }
     &:hover > li {
       opacity: 0.75;
@@ -63,9 +64,9 @@
     position: absolute;
     inset: 0;
     background-color: var(--color-first);
+    border-radius: 50px;
     opacity: 0.25;
     z-index: -1;
-    border-radius: 20px;
   }
 }
 @keyframes goBack {
