@@ -46,6 +46,9 @@ footer {
 }
 
 @media (max-width: 750px) {
+  footer {
+    gap: 0.5rem;
+  }
   .footer-right {
     gap: 0.5rem;
   }

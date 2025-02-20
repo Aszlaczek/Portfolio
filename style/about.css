@@ -12,29 +12,29 @@
 }
 
 .about-left {
-  position: relative;
   left: -5%;
   bottom: 0;
   width: clamp(2rem, 40vw, 50rem);
   &::before {
     content: "";
     position: absolute;
-    width: 300%;
-    aspect-ratio: 1;
-    left: -150%;
-    top: -75%;
+    width: clamp(25rem, 100%, 80rem);
+    aspect-ratio: 1.5/1;
+    left: -25%;
+    top: 10%;
     z-index: -1;
-    background: url("../assets/blob-img.svg");
+    background: url("../assets/svg/blob_2.svg");
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.5;
-    rotate: 180deg;
+    rotate: 0deg;
   }
 }
 
 .about-right {
   position: relative;
   place-self: center;
+  text-align: justify;
   &::after {
     content: "";
     position: absolute;

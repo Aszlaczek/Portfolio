@@ -41,10 +41,10 @@
 .project-item {
   height: min-content;
   transition: all var(--time-2);
-
   &:hover {
     scale: 1.1;
     opacity: 1 !important;
+    z-index: 100;
   }
   a {
     text-decoration: none;
@@ -55,6 +55,8 @@
   }
   img {
     border-radius: 20px;
+    width: 100%;
+    height: clamp(8rem, 30svh, 20rem);
   }
 }
 

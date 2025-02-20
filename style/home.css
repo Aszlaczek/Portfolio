@@ -17,7 +17,7 @@
   position: relative;
   border-radius: var(--border);
   z-index: 10;
-  text-align: center;
+  text-align: justify;
   width: 100%;
   z-index: -1;
   background-color: var(--color-second);
@@ -64,7 +64,7 @@
 .card {
   position: relative;
   border-radius: 10px;
-  grid-template-rows: min-content 1fr 1fr;
+  grid-template-rows: repeat(3, min-content);
   & > h1,
   h2 {
     width: 100%;

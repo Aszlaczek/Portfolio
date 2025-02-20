@@ -15,8 +15,8 @@
   display: grid;
   place-items: center;
   a {
-    place-self: start center;
     --custom-time: 0.5s;
+    place-self: start center;
     transition: all var(--custom-time);
     width: clamp(10rem, 50%, 15rem);
     aspect-ratio: 1;
@@ -71,6 +71,7 @@ form {
   display: grid;
   font-size: clamp(12px, 5svw - 1rem, 26px);
   position: relative;
+  padding: 1rem 0;
 
   &::after {
     content: "";

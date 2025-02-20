@@ -73,7 +73,7 @@ const addAnimation = (id, section) => {
 };
 
 function checkMainPage() {
-  const validNumber = window.innerWidth > 750 ? 450 : 300;
+  const validNumber = window.innerWidth > 750 ? 500 : 350;
   if (listOfSections[0].getBoundingClientRect().top <= validNumber) {
     removeActive(0);
     addAnimation(0, "home");
@@ -97,6 +97,10 @@ function checkMainPage() {
     removeActive(3);
     listOfListItems[3].classList.add("active");
     listOfSections[3].querySelector("h1").classList.add("active-header");
+
+    for (let i of listOfSections[3].querySelectorAll(".icons-item")) {
+      i.classList.add("add-animation");
+    }
     addAnimation(3, "ability");
   }
   if (listOfSections[4].getBoundingClientRect().top <= validNumber) {
