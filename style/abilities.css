@@ -38,7 +38,7 @@
   justify-content: center;
   align-items: center;
   transition: all var(--time-2);
-  z-index: 10;
+  z-index: 1;
   &:hover {
     img {
       scale: 0.8;
@@ -66,7 +66,7 @@
     width: clamp(0.75rem, 5svw, 8rem);
     rotate: calc(-360deg / 10 * var(--id));
     transition: all var(--time-2);
-    z-index: 100;
+    z-index: 2;
   }
 }
 

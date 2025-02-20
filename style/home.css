@@ -33,6 +33,9 @@
   place-items: center;
   grid-template-rows: repeat(2, min-content);
   gap: 25px;
+  strong {
+    text-align: center !important;
+  }
 }
 
 .home-right {

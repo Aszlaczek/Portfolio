@@ -80,12 +80,14 @@ function checkMainPage() {
     listOfListItems[0].classList.add("active");
     listOfSections[0].querySelectorAll("h1")[0].classList.add("active-header");
     listOfSections[0].querySelectorAll("h1")[1].classList.add("active-header");
+    listOfSections[0].querySelectorAll("h1")[2].classList.add("active-header");
   }
   if (listOfSections[1].getBoundingClientRect().top <= validNumber) {
     removeActive(1);
     listOfListItems[1].classList.add("active");
     listOfSections[1].querySelector("h1").classList.add("active-header");
-    addAnimation(1, "about");
+    listOfSections[1].querySelector("img").classList.add("showSide");
+    listOfSections[1].querySelector(".about-right").classList.add("showUp");
   }
   if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
     removeActive(2);
