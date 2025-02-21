@@ -1,5 +1,5 @@
 @import "./variable.css";
-#ability {
+#skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -10,7 +10,7 @@
   }
 }
 
-.ability-left {
+.skills-left {
   width: 100%;
   position: relative;
   display: grid;
@@ -70,7 +70,7 @@
   }
 }
 
-.ability-right {
+.skills-right {
   width: 100%;
 }
 
@@ -81,7 +81,7 @@
   place-items: center;
 }
 
-.content-ability {
+.content-skills {
   position: relative;
   padding: 2rem 1.75rem;
   text-align: center;
@@ -108,7 +108,7 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 30px;
+    inset: 10px;
     background-color: var(--color-first);
     border-radius: 50px;
     opacity: 0.25;
@@ -122,21 +122,21 @@
   }
 }
 @media (max-width: 750px) {
-  #ability {
+  #skills {
     grid-template-columns: 1fr;
     h1 {
       grid-column: 1;
     }
   }
-  .ability-left {
+  .skills-left {
     width: 100%;
     grid-row: 2;
   }
-  .ability-right {
+  .skills-right {
     grid-row: 3;
   }
   .icons-item {
-    left: 0svw;
+    left: -2svw;
     transform-origin: 35svw;
     img {
       width: 10svw;

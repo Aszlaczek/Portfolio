@@ -25,11 +25,17 @@ function showNavigation(item) {
   navbar.classList.toggle("openNav");
   item.classList.toggle("expanded");
   if (navbar.classList.contains("openNav")) {
-    item.innerText = "Close";
+    document.documentElement.lang === "pl"
+      ? (item.innerText = "Menu")
+      : (item.innerText = "Close");
   } else {
-    item.innerText = "Open";
+    document.documentElement.lang === "pl"
+      ? (item.innerText = "Menu")
+      : (item.innerText = "Open");
   }
 }
+
+console.log(document.documentElement.lang);
 
 function removeOpenButton() {
   if (window.innerWidth > 750) {
@@ -43,7 +49,8 @@ function removeOpenButton() {
 const createOpenButton = () => {
   if (window.innerWidth < 750 && !document.querySelector(".btn-open")) {
     const openButton = document.createElement("button");
-    openButton.textContent = "Open";
+    openButton.textContent =
+      document.documentElement.lang === "pl" ? "Menu" : "Open";
     openButton.classList.add("btn-open");
     openButton.setAttribute("aria-expanded", "false");
     openButton.addEventListener("click", () => showNavigation(openButton));
@@ -103,7 +110,7 @@ function checkMainPage() {
     for (let i of listOfSections[3].querySelectorAll(".icons-item")) {
       i.classList.add("add-animation");
     }
-    addAnimation(3, "ability");
+    addAnimation(3, "skills");
   }
   if (listOfSections[4].getBoundingClientRect().top <= validNumber) {
     removeActive(4);

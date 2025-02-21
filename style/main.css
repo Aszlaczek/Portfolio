@@ -3,7 +3,7 @@
 @import "./variable.css";
 @import "./about.css";
 @import "./projects.css";
-@import "./abilities.css";
+@import "./skills.css";
 @import "./cv.css";
 @import "./footer.css";
 
@@ -98,6 +98,17 @@ img {
   }
 }
 
+.language {
+  position: absolute;
+  top: 2.5rem;
+  left: 0.75rem;
+  width: clamp(2.5rem, 8svw, 5.5rem);
+  animation: showContentSide var(--time-3);
+  & > * {
+    border-radius: 5px;
+  }
+}
+
 .showUp {
   animation: showContentUp var(--time-3);
 }
@@ -116,5 +127,9 @@ section {
 @media (max-width: 750px) {
   p {
     padding: 0;
+  }
+  .language {
+    top: 0rem;
+    left: 1%;
   }
 }
