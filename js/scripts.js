@@ -90,7 +90,6 @@ function checkMainPage() {
   const validNumber = window.innerWidth > 750 ? 500 : 350;
   if (listOfSections[0].getBoundingClientRect().top <= validNumber) {
     removeActive(0);
-    addAnimation(0, "home");
     listOfListItems[0].classList.add("active");
     listOfSections[0].querySelectorAll("h1")[0].classList.add("active-header");
     listOfSections[0].querySelectorAll("h1")[1].classList.add("active-header");
@@ -100,8 +99,6 @@ function checkMainPage() {
     removeActive(1);
     listOfListItems[1].classList.add("active");
     listOfSections[1].querySelector("h1").classList.add("active-header");
-    // listOfSections[1].querySelector("img").classList.add("showSide");
-    // listOfSections[1].querySelector(".about-right").classList.add("showUp");
     addAnimation(1, "about");
   }
   if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
