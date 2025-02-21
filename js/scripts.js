@@ -67,23 +67,18 @@ const removeActive = (id) => {
   }
 };
 
-// const addAnimation = (id, section) => {
-//   if (!listOfSections[id].getAttribute("aria-haspopup")) {
-//     listOfSections[id]
-//       .querySelector(`.${section}-left`)
-//       .classList.add("showSide");
-//     listOfSections[id]
-//       .querySelector(`.${section}-right`)
-//       .classList.add("showUp");
-//     listOfSections[id].setAttribute("aria-haspopup", "true");
-//   }
-// };
-
 const addAnimation = (id, section) => {
+  listOfSections[id].classList.contains("hide")
+    ? listOfSections[id].classList.remove("hide")
+    : "";
   if (!listOfSections[id].getAttribute("aria-haspopup")) {
-    listOfSections[id]
-      .querySelector(`.${section}-left`)
-      .classList.add("showSide");
+    if (id === 1) {
+      listOfSections[id].querySelector("img").classList.add("showSide");
+    } else {
+      listOfSections[id]
+        .querySelector(`.${section}-left`)
+        .classList.add("showSide");
+    }
     listOfSections[id]
       .querySelector(`.${section}-right`)
       .classList.add("showUp");
@@ -105,8 +100,9 @@ function checkMainPage() {
     removeActive(1);
     listOfListItems[1].classList.add("active");
     listOfSections[1].querySelector("h1").classList.add("active-header");
-    listOfSections[1].querySelector("img").classList.add("showSide");
-    listOfSections[1].querySelector(".about-right").classList.add("showUp");
+    // listOfSections[1].querySelector("img").classList.add("showSide");
+    // listOfSections[1].querySelector(".about-right").classList.add("showUp");
+    addAnimation(1, "about");
   }
   if (listOfSections[2].getBoundingClientRect().top <= validNumber) {
     removeActive(2);

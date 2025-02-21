@@ -123,6 +123,10 @@ section {
   height: auto;
 }
 
+.hide {
+  opacity: 0;
+}
+
 @media (max-width: 750px) {
   p {
     padding: 0;
