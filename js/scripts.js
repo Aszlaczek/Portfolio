@@ -67,6 +67,18 @@ const removeActive = (id) => {
   }
 };
 
+// const addAnimation = (id, section) => {
+//   if (!listOfSections[id].getAttribute("aria-haspopup")) {
+//     listOfSections[id]
+//       .querySelector(`.${section}-left`)
+//       .classList.add("showSide");
+//     listOfSections[id]
+//       .querySelector(`.${section}-right`)
+//       .classList.add("showUp");
+//     listOfSections[id].setAttribute("aria-haspopup", "true");
+//   }
+// };
+
 const addAnimation = (id, section) => {
   if (!listOfSections[id].getAttribute("aria-haspopup")) {
     listOfSections[id]

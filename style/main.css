@@ -14,7 +14,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Joan";
-  /* outline: 1px solid red; */
   interpolate-size: allow-keywords;
 }
 
@@ -91,7 +90,7 @@ img {
 @keyframes showContentSide {
   0% {
     translate: -200px 0;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     opacity: 1;
