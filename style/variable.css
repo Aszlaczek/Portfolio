@@ -1,15 +1,31 @@
 :root {
-  --color-white: #e6e6e6;
-  --color-black: #0f0f0f;
-  --color-first: #c5a880;
-  --color-second: #532e1c;
-  --font-xs: 12px;
-  --font-s: 18px;
-  --font-m: 24px;
-  --font-l: 28px;
-  --font-xl: 32px;
-  --time-1: 0.2s;
-  --time-2: 0.3s;
-  --time-3: 1s;
-  --main-padding: 8svw;
+  /* Swiss-Tech Palette */
+  --clr-bg: #050608;
+  --clr-text: #FFFFFF;
+  --clr-muted: #888888;
+  --clr-highlight: #2264DF;
+  --clr-border: rgba(255, 255, 255, 0.08);
+  
+  /* Glass Effects */
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-blur: 15px;
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+  /* Secondary Accents from User */
+  --clr-blue-mid: #3E7CDA;
+  --clr-teal: #60C3B5;
+  --clr-green: #66F295;
+
+  /* Typography Scale */
+  --fs-xs: 0.75rem;
+  --fs-s: 0.825rem;
+  --fs-m: 1.1rem;
+  --fs-l: 1.4rem;
+  --fs-xl: clamp(3rem, 10vw, 8rem);
+
+  /* Spacing */
+  --section-gap: 12rem;
+  --main-padding: 3rem;
+  --nav-gap: 3.5rem;
 }

@@ -1,339 +1,201 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="./style/main.css" />
+  <title>Adrian Wzorek | AI & Web Architect</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Joan&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="shortcut icon" href="./assets/Illustrations/(Essential) - Avatars accounts boy.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style/main.css" />
 </head>
 
-<body>
-  <a href="./index_en.html" class="language">
-    <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.2 38.4"
-      style="enable-background: new 0 0 55.2 38.4" xml:space="preserve">
-      <style type="text/css">
-        .st0 {
-          fill: #fefefe;
-        }
-
-        .st1 {
-          fill: #c8102e;
-        }
-
-        .st2 {
-          fill: #012169;
-        }
-      </style>
-      <g>
-        <path class="st0"
-          d="M2.87,38.4h49.46c1.59-0.09,2.87-1.42,2.87-3.03V3.03c0-1.66-1.35-3.02-3.01-3.03H3.01 C1.35,0.01,0,1.37,0,3.03v32.33C0,36.98,1.28,38.31,2.87,38.4L2.87,38.4z" />
-        <polygon class="st1"
-          points="23.74,23.03 23.74,38.4 31.42,38.4 31.42,23.03 55.2,23.03 55.2,15.35 31.42,15.35 31.42,0 23.74,0 23.74,15.35 0,15.35 0,23.03 23.74,23.03" />
-        <path class="st2" d="M33.98,12.43V0h18.23c1.26,0.02,2.34,0.81,2.78,1.92L33.98,12.43L33.98,12.43z" />
-        <path class="st2" d="M33.98,25.97V38.4h18.35c1.21-0.07,2.23-0.85,2.66-1.92L33.98,25.97L33.98,25.97z" />
-        <path class="st2" d="M21.18,25.97V38.4H2.87c-1.21-0.07-2.24-0.85-2.66-1.94L21.18,25.97L21.18,25.97z" />
-        <path class="st2" d="M21.18,12.43V0H2.99C1.73,0.02,0.64,0.82,0.21,1.94L21.18,12.43L21.18,12.43z" />
-        <polygon class="st2" points="0,12.8 7.65,12.8 0,8.97 0,12.8" />
-        <polygon class="st2" points="55.2,12.8 47.51,12.8 55.2,8.95 55.2,12.8" />
-        <polygon class="st2" points="55.2,25.6 47.51,25.6 55.2,29.45 55.2,25.6" />
-        <polygon class="st2" points="0,25.6 7.65,25.6 0,29.43 0,25.6" />
-        <polygon class="st1" points="55.2,3.25 36.15,12.8 40.41,12.8 55.2,5.4 55.2,3.25" />
-        <polygon class="st1" points="19.01,25.6 14.75,25.6 0,32.98 0,35.13 19.05,25.6 19.01,25.6" />
-        <polygon class="st1" points="10.52,12.81 14.78,12.81 0,5.41 0,7.55 10.52,12.81" />
-        <polygon class="st1" points="44.63,25.59 40.37,25.59 55.2,33.02 55.2,30.88 44.63,25.59" />
-      </g>
-    </svg>
-  </a>
-  <nav id="navigation" class="navbar">
-    <ul class="list">
-      <li class="list-item" style="--item: 1">
-        <a href="#home">Główna </a>
-      </li>
-      <li class="list-item" style="--item: 2"><a href="#about">O mnie</a></li>
-      <li class="list-item" style="--item: 3">
-        <a href="#projects">Projekty</a>
-      </li>
-      <li class="list-item" style="--item: 4">
-        <a href="#skills">Umiejętności</a>
-      </li>
-      <li class="list-item" style="--item: 5"><a href="#cv">CV</a></li>
-    </ul>
-    <div class="contact-box">
-      <button id="contact-btn">Kontakt</button>
-    </div>
-  </nav>
-  <div class="main-container">
-    <section id="home" class="home">
-      <div class="home-left showUp">
-        <div class="context showSide">
-          <h1>Kim jestem?</h1>
-          <p>
-            Cześć, jestem Adrian, programistą webowym z dyplomem z
-            informatyki, pasjonującym się tworzeniem nowoczesnych i wydajnych
-            aplikacji internetowych. Specjalizuję się w JavaScript, TypeScript
-            i Pythonie, pracując z frameworkami takimi jak React.js i Django.
-          </p>
-          <h1>Co mnie napędza?</h1>
-          <p>
-            Nieustanna chęć nauki i innowacji. Uwielbiam odkrywać nowe
-            technologie, doskonalić swoje umiejętności i podejmować wyzwania,
-            które popychają mnie do przodu. Moja elastyczność pozwala mi
-            nadążać za dynamicznie zmieniającym się światem technologii, a
-            umiejętność jasnego komunikowania pomysłów sprawia, że współpraca
-            ze mną jest płynna i efektywna.
-          </p>
-        </div>
-      </div>
-      <div class="home-right card showUp">
-        <div class="card-head">
-          <img src="./assets/Illustrations/(Essential) - Avatars accounts boy.png" alt="avatar" />
-        </div>
-        <h1>Adrian Wzorek</h1>
-        <h2>Młodszy programista webowy</h2>
-      </div>
-    </section>
-    <section id="about" class="hide">
-      <h1>O mnie</h1>
-      <div class="about-left">
-        <img src="./assets/Illustrations/(Essential) - karate.png" alt="karate" />
-      </div>
-      <div class="about-right">
-        <p>
-          Ruch zawsze był moją pasją – w każdej formie. Od ponad pięciu lat
-          jestem instruktorem karate, dzieląc się swoją wiedzą i dyscypliną z
-          uczniami w różnym wieku. Dodatkowo, jako wychowawca na obozach
-          sportowych, miałem okazję pracować z różnorodnymi grupami,
-          wspierając i motywując ludzi w różnych środowiskach. Te
-          doświadczenia ukształtowały nie tylko moje umiejętności pracy
-          zespołowej, ale także zdolność do jasnej i skutecznej komunikacji.
-          Precyzyjne tłumaczenie zadań i dbanie o to, by każdy rozumiał cel,
-          stało się dla mnie naturalne. Zarówno w sporcie, jak i w web
-          developmencie, wierzę, że precyzja, elastyczność i silne przywództwo
-          mają kluczowe znaczenie.
-        </p>
-      </div>
-    </section>
-    <section id="projects" class="hide">
-      <h1>Moje projekty</h1>
-      <div class="projects-left">
-        <ul class="projects-list">
-          <li class="project-item card" style="--item: 1">
-            <a href="https://pairs-one.vercel.app/">
-              <p>Gra w memory</p>
-              <img src="./assets/Projects/Mmory_game.png" alt="memory-game" />
-            </a>
-          </li>
-          <li class="project-item card" style="--item: 2">
-            <a href="https://colors-iota.vercel.app/">
-              <p>Translator kolorów</p>
-              <img src="./assets/Projects/Color-picker.png" alt="color-picker" />
-            </a>
-          </li>
-          <li class="project-item card" style="--item: 3">
-            <a href="https://counter-psi-blush.vercel.app/">
-              <p>Monitorowanie czasu</p>
-              <img src="./assets/Projects/Obecnosc-apk.png" alt="counter-apk" />
-            </a>
-          </li>
-          <li class="project-item card" style="--item: 4">
-            <a href="https://dictionary-nu-ten.vercel.app/">
-              <p>Słownik przy użyciu AI</p>
-              <img src="./assets/Projects/Dictionary-AI.png" alt="search-bar" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="projects-right">
-        <div class="container-desk">
-          <img src="./assets/Illustrations/(Essential) - Ux user interface ui design.png" alt="desk_project" />
-          <div class="content">
-            <p>
-              Więcej projektów na moim GitHubie
-              <a href="https://github.com/aszlaczek">
-                <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
-                  text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
-                  clip-rule="evenodd" viewBox="0 0 640 640">
-                  <path
-                    d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z" />
-                </svg>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="skills" class="hide">
-      <h1>Umiejętności</h1>
-      <div class="skills-left">
-        <ul class="icons">
-          <li class="img-box icons-item" style="--id: 0">
-            <img src="./assets/svg-carousel/djangoproject.svg" alt="django" />
-          </li>
-          <li class="img-box icons-item" style="--id: 1">
-            <img src="./assets/svg-carousel/file-type-mysql.svg" alt="mysql" />
-          </li>
-          <li class="img-box icons-item" style="--id: 2">
-            <img src="./assets/svg-carousel/file-type-python.svg" alt="python" />
-          </li>
-          <li class="img-box icons-item" style="--id: 3">
-            <img src="./assets/svg-carousel/file-type-reactjs.svg" alt="react" />
-          </li>
-          <li class="img-box icons-item" style="--id: 4">
-            <img src="./assets/svg-carousel/file-type-sqlite.svg" alt="sqlite" />
-          </li>
-          <li class="img-box icons-item" style="--id: 5">
-            <img src="./assets/svg-carousel/file-type-typescript-official.svg" alt="typescript" />
-          </li>
-          <li class="img-box icons-item" style="--id: 6">
-            <img src="./assets/svg-carousel/javascript.svg" alt="javascript" />
-          </li>
-          <li class="img-box icons-item" style="--id: 7">
-            <img src="./assets/svg-carousel/nextjs.svg" alt="nextjs" />
-          </li>
-          <li class="img-box icons-item" style="--id: 8">
-            <img src="./assets/svg-carousel/nodejs-original.svg" alt="nodejs" />
-          </li>
-          <li class="img-box icons-item" style="--id: 9">
-            <img src="./assets/svg-carousel/postgresql-plain.svg" alt="postgresql" />
-          </li>
-        </ul>
-        <div class="container-brain">
-          <img src="./assets/Illustrations/(Essential) - Brain microchip ai brain brain intelligence.png" alt="Brain" />
-        </div>
-      </div>
-      <div class="skills-right">
-        <div class="content-skills">
-          <ul>
-            <li>
-              <p>Skuteczna komunikacja</p>
-            </li>
-            <li>
-              <p>Praca zespołowa</p>
-            </li>
-            <li>
-              <p>Języki</p>
-              <p>Polski - Natywny</p>
-              <p>Angielksi - B2</p>
-            </li>
-            <li>
-              <p>Elastyczność</p>
-            </li>
-            <li>
-              <p>Rozwiązywanie problemów</p>
-            </li>
-            <li>
-              <p>Zarządzanie czasem</p>
-            </li>
-            <li>
-              <p>Krytyczne myślenie</p>
-            </li>
-            <li>
-              <p>Kreatywność</p>
-            </li>
-            <li>
-              <p>Samodzielność i motywacja</p>
-            </li>
-            <li>
-              <p></p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section id="cv" class="hide">
-      <h1>Curriculum Vitae</h1>
-      <div class="cv-left">
-        <a href="./assets/Adrian_Wzorek_CV_pl.pdf" download="Adrian_Wzorek_CV_pl.pdf">
-          <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
-              <path
-                d="m6 22h12c1.1046 0 2-.8954 2-2v-10.17157c0-.53044-.2107-1.03914-.5858-1.41422l-5.8284-5.82842c-.3751-.37508-.8838-.58579-1.4142-.58579h-6.1716c-1.10457 0-2 .89543-2 2v16c0 1.1046.89543 2 2 2z" />
-              <path d="m13 2.5v6.5h6" />
-              <path d="m8 17h7" />
-              <path d="m8 13h7" />
-              <path d="m8 9h1" />
-            </g>
-          </svg>
-        </a>
-      </div>
-      <div class="cv-right">
-        <h1>Napisz do mnie</h1>
-        <form action="https://api.web3forms.com/submit" method="post">
-          <input type="hidden" name="access_key" value="09fd9ecf-de99-4bde-9afe-f894041b1a22" />
-          <div class="email-form">
-            <label for="email-input">Email</label>
-            <input type="email" name="email" id="email-input" required />
-          </div>
-          <div class="title-form">
-            <label for="title-input">Tytuł</label>
-            <input type="text" name="title" id="title-input" required />
-          </div>
-          <div class="context-form">
-            <label for="context-input">Treść</label>
-            <textarea name="context" id="context-input"></textarea>
-          </div>
-          <button type="submit">Wyślij</button>
-        </form>
-      </div>
-    </section>
+<body class="theme-crystal">
+  <div id="void-container">
+    <canvas id="neural-web-canvas"></canvas>
+    <div id="void-glow"></div>
   </div>
-  <footer id="footer">
-    <div class="footer-left">
-      <a href="https://www.pictographic.io/">
-        <p>Ilustracje autorstwa Pictographic</p>
-      </a>
-    </div>
-    <div class="footer-right">
-      <p>Inne linki</p>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/adrian-wzorek-902572309/">
-          <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
-            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
-            clip-rule="evenodd" viewBox="0 0 512 509.64">
-            <rect width="512" height="509.64" rx="115.61" ry="115.61" />
-            <path fill="#fff"
-              d="M204.97 197.54h64.69v33.16h.94c9.01-16.16 31.04-33.16 63.89-33.16 68.31 0 80.94 42.51 80.94 97.81v116.92h-67.46l-.01-104.13c0-23.81-.49-54.45-35.08-54.45-35.12 0-40.51 25.91-40.51 52.72v105.86h-67.4V197.54zm-38.23-65.09c0 19.36-15.72 35.08-35.08 35.08-19.37 0-35.09-15.72-35.09-35.08 0-19.37 15.72-35.08 35.09-35.08 19.36 0 35.08 15.71 35.08 35.08zm-70.17 65.09h70.17v214.73H96.57V197.54z" />
-          </svg>
-        </a>
-        <a href="https://github.com/aszlaczek">
-          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" shape-rendering="geometricPrecision"
-            text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
-            clip-rule="evenodd" viewBox="0 0 640 640">
-            <path
-              d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z" />
-          </svg>
-        </a>
-        <a href="https://icodethis.com/Aszlaczek">
-          <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 111.23"
-            style="enable-background: new 0 0 122.88 111.23" xml:space="preserve">
-            <style type="text/css">
-              .stE {
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              }
-            </style>
-            <g>
-              <polygon class="stE"
-                points="18.29,0.01 14.16,20.64 98.14,20.64 95.51,33.97 11.49,33.96 7.42,54.59 91.39,54.59 86.7,78.12 52.86,89.33 23.53,78.12 25.54,67.91 4.91,67.91 0,92.67 48.51,111.23 104.43,92.67 122.88,0 18.29,0.01" />
-            </g>
-          </svg>
-        </a>
+
+  <div id="top-bar">
+    <nav class="navbar-crystal">
+      <div class="logo-group"><div class="nav-logo">AW<span>.ai</span></div></div>
+      <ul class="nav-links">
+        <li><a href="#home" data-i18n="nav_home">Główna</a></li>
+        <li><a href="#about" data-i18n="nav_about">Narracja</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projekty</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Ekspertyza</a></li>
+        <li><a href="#cv" data-i18n="nav_cv">CV</a></li>
+      </ul>
+      <div class="lang-group">
+        <button id="lang-switch" class="crystal-toggle">
+          <span class="active">PL</span> / <span>EN</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="main-container">
+    <section id="home" class="hero-crystal reveal-shutter active">
+      <div class="hero-content">
+        <div class="hero-meta-bar">
+          <span class="badge-crystal" data-i18n="hero_role">AI Developer | Full-Stack</span>
+          <div class="social-mini">
+             <a href="https://linkedin.com/in/adrian-wzorek-902572309/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+             <a href="https://github.com/aszlaczek" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub profile"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          </div>
+        </div>
+        <h1 class="hero-title-crystal">
+          <span data-i18n="hero_subtitle">Adrian Wzorek</span><br/>
+          <span class="typewriter-group"><span id="typewriter"></span><span class="cursor">|</span></span>
+        </h1>
+        <div class="hero-stats-crystal">
+          <div class="stat-item"><span class="stat-num">5+</span><span class="stat-label">Lat Liderowania</span></div>
+          <div class="stat-item"><span class="stat-num">AI</span><span class="stat-label">Agenty & ML</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NARRATIVE (STAGGERED MODULES) -->
+    <section id="about" class="narrative-crystal">
+      <h2 class="label-crystal" data-i18n="about_title">Strategia Inżynierska</h2>
+      
+      <div class="narrative-stagger">
+        <!-- Module S.01 -->
+        <article class="narrative-module reveal-left tilt-card">
+          <div class="module-header">
+            <span class="module-id">S.01</span>
+            <span class="module-label" data-i18n="about_intro_title">System Architecture</span>
+          </div>
+          <div class="module-content">
+            <div class="card-icon blue"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg></div>
+            <h3 data-i18n="about_intro_title">Precyzja Inżynierska</h3>
+            <p data-i18n="about_intro_text">...</p>
+            <div class="tech-tags">
+               <span class="tag">AGILE</span> <span class="tag">SCRUM</span> <span class="tag">CLEAN CODE</span> <span class="tag">GIT-FLOW</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Module S.02 -->
+        <article class="narrative-module reveal-right highlight tilt-card">
+          <div class="module-header">
+            <span class="module-id">S.02</span>
+            <span class="module-label" data-i18n="about_ai_title">Agent Evolution</span>
+          </div>
+          <div class="module-content">
+            <div class="card-icon white"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M12 2v8l-4 4M16 14l-4-4M2 18h20"/><circle cx="12" cy="10" r="3"/><path d="M7 22h10"/></svg></div>
+            <h3 data-i18n="about_ai_title">Ekosystem Agentów AI</h3>
+            <p data-i18n="about_ai_text">...</p>
+            <div class="tech-tags">
+               <span class="tag">AI AGENTS</span> <span class="tag">LLM OPS</span> <span class="tag">RAG ARCHITECT</span> <span class="tag">NEURAL WEB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Module S.03 -->
+        <article class="narrative-module reveal-left tilt-card">
+          <div class="module-header">
+            <span class="module-id">S.03</span>
+            <span class="module-label" data-i18n="about_martial_title">Work Ethic & Leadership</span>
+          </div>
+          <div class="module-content">
+            <div class="card-icon blue"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3 data-i18n="about_martial_title">Etyka i Przywództwo</h3>
+            <p data-i18n="about_martial_text">...</p>
+            <div class="tech-tags">
+               <span class="tag">LEADERSHIP</span> <span class="tag">MENTORSHIP</span> <span class="tag">ADAPTABILITY</span> <span class="tag">PROACTIVE</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-crystal reveal-glow">
+      <h2 class="label-crystal" data-i18n="nav_projects">Projekty</h2>
+      <div class="projects-crystal-grid">
+        <div class="crystal-card project-card-crystal-detailed tilt-card">
+          <a href="https://pairs-one.vercel.app/" target="_blank" rel="noopener" title="Memory Flow Project">
+            <span class="p-id">P.01</span>
+            <h3 data-i18n="proj_1">Memory Flow</h3>
+            <p class="p-desc" data-i18n="proj_1_desc">...</p>
+            <div class="p-cta">
+               <span data-i18n="proj_look">Explore Project</span>
+               <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+        <div class="crystal-card project-card-crystal-detailed tilt-card">
+          <a href="https://colors-iota.vercel.app/" target="_blank" rel="noopener" title="Color Spectrum Project">
+            <span class="p-id">P.02</span>
+            <h3 data-i18n="proj_2">Color Spectrum</h3>
+            <p class="p-desc" data-i18n="proj_2_desc">...</p>
+            <div class="p-cta">
+               <span data-i18n="proj_look">Explore Project</span>
+               <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+        <div class="crystal-card project-card-crystal-detailed tilt-card">
+          <a href="https://counter-psi-blush.vercel.app/" target="_blank" rel="noopener" title="Attendance Analytics Project">
+            <span class="p-id">P.03</span>
+            <h3 data-i18n="proj_3">Attendance</h3>
+            <p class="p-desc" data-i18n="proj_3_desc">...</p>
+            <div class="p-cta">
+               <span data-i18n="proj_look">Explore Project</span>
+               <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+        <div class="crystal-card project-card-crystal-detailed tilt-card">
+          <a href="https://dictionary-nu-ten.vercel.app/" target="_blank" rel="noopener" title="AI Lexicon Project">
+            <span class="p-id">P.04</span>
+            <h3 data-i18n="proj_4">AI Lexicon</h3>
+            <p class="p-desc" data-i18n="proj_4_desc">...</p>
+            <div class="p-cta">
+               <span data-i18n="proj_look">Explore Project</span>
+               <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="cv" class="contact-crystal reveal-impact">
+       <div class="contact-crystal-layout">
+          <div class="contact-form-crystal no-card">
+            <h2 data-i18n="contact_title">Nawiąż Relację</h2>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="post">
+              <input type="hidden" name="access_key" value="09fd9ecf-de99-4bde-9afe-f894041b1a22" />
+              <div class="crystal-input-group">
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="title" placeholder="Temat" required />
+                <textarea name="context" placeholder="Wiadomość" required></textarea>
+              </div>
+              <button type="submit" class="crystal-btn-primary" data-i18n="form_send">Wyślij</button>
+            </form>
+          </div>
+          <div class="cv-crystal-side">
+            <a href="./assets/Adrian_Wzorek_CV_pl.pdf" download id="cv-link" class="crystal-card cv-btn-crystal-premium tilt-card">
+               <div class="cv-icon-pulsar"><svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg></div>
+               <span data-i18n="cv_btn">Pobierz CV</span>
+            </a>
+          </div>
+       </div>
+    </section>
+  </main>
+
+  <footer id="footer-crystal">
+    <div class="footer-wrap">
+      <div class="footer-left"><p>&copy; 2024 Adrian Wzorek</p></div>
+      <div class="footer-socials">
+         <a href="https://linkedin.com/in/adrian-wzorek-902572309/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+         <a href="https://github.com/aszlaczek" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub profile"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
       </div>
     </div>
   </footer>
+
+  <script src="./js/scripts.js"></script>
 </body>
-<script src="./js/jquery-3.7.1.min.map"></script>
-
-<script src="./js/scripts.js"></script>
-
 </html>
