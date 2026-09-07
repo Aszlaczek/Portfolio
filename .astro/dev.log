@@ -1,0 +1,53 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.3.1 ready in 540 ms\n┃ Local    http://localhost:4321/portfolio\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
+Invalid DOM property `class`. Did you mean `className`?
+{"message":"[200] / 20ms","label":null,"level":"info"}
+{"message":"[404] /en/ 17ms","label":null,"level":"info"}
+{"message":"[404] /en/ 3ms","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
+{"message":"Configuration file removed. Restarting...","label":null,"level":"info"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"Missing pages directory: src/pages","label":null,"level":"warn"}
+{"message":"changed tsconfig file detected: /Users/adrian/Desktop/Projects/Portfolio/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.","label":"vite","level":"info"}
+{"message":"index.html","label":"watch","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"index.html","label":"watch","level":"info"}
+{"message":"index.html","label":"watch","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
