@@ -1,0 +1,73 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { projects } from '../../data/projects';
+
+export async function getStaticPaths() {
+  const paths = [];
+  
+  // Polish versions
+  for (const project of projects) {
+    paths.push({
+      params: { slug: project.slug },
+      props: { project, lang: 'pl' as const }
+    });
+  }
+  
+  // English versions
+  for (const project of projects) {
+    paths.push({
+      params: { slug: `${project.slug}_en` },
+      props: { project, lang: 'en' as const }
+    });
+  }
+  
+  return paths;
+}
+
+const { project, lang } = Astro.props;
+
+const content = {
+  pl: {
+    backLabel: '← Powrót do projektów',
+    nextLabel: 'Następny projekt →',
+    sections: {
+      problem: 'Problem',
+      role: 'Moja rola',
+      process: 'Proces',
+      solution: 'Rozwiązanie',
+      result: 'Wynik',
+      links: 'Linki'
+    },
+    liveDemo: 'Demo na żywo',
+    repository: 'Repozytorium'
+  },
+  en: {
+    backLabel: '← Back to Projects',
+    nextLabel: 'Next Project →',
+    sections: {
+      problem: 'Problem',
+      role: 'My Role',
+      process: 'Process',
+      solution: 'Solution',
+      result: 'Result',
+      links: 'Links'
+    },
+    liveDemo: 'Live Demo',
+    repository: 'Repository'
+  }
+};
+
+const t = content[lang];
+const currentIndex = projects.findIndex(p => p.slug === project.slug);
+const nextProject = projects[(currentIndex + 1) % projects.length];
+const nextProjectUrl = `/portfolio/${lang === 'en' ? 'en/' : ''}projects/${nextProject.slug}${lang === 'en' ? '_en' : ''}/`;
+const backUrl = `/portfolio/${lang === 'en' ? 'en/' : ''}#projects`;
+---
+
+<ProjectLayout 
+  project={project} 
+  lang={lang} 
+  t={t} 
+  backUrl={backUrl} 
+  nextProjectUrl={nextProjectUrl} 
+/>

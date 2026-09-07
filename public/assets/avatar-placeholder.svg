@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="Avatar placeholder">
+  <circle cx="100" cy="100" r="100" fill="currentColor" opacity="0.1"/>
+  <circle cx="100" cy="75" r="35" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+  <ellipse cx="100" cy="165" rx="55" ry="45" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+  <text x="100" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="currentColor" opacity="0.5">Adrian Wzorek</text>
+</svg>

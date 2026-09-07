@@ -1,0 +1,52 @@
+---
+import FadeIn from './FadeIn.tsx';
+import { skills } from '../data/experience';
+
+interface Props {
+  lang: 'pl' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const title = { pl: 'Umiejętności', en: 'Skills' };
+const subtitle = {
+  pl: 'Technologie i narzędzia, z których korzystam na co dzień',
+  en: 'Technologies and tools I use daily'
+};
+
+const categories = {
+  languages: { pl: 'Języki programowania', en: 'Programming Languages' },
+  frameworks: { pl: 'Frameworki i technologie', en: 'Frameworks & Technologies' },
+  tools: { pl: 'Narzędzia', en: 'Tools' },
+  soft: { pl: 'Umiejętności miękkie', en: 'Soft Skills' },
+  languages2: { pl: 'Języki obce', en: 'Languages' }
+};
+---
+
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container mx-auto px-4">
+    <FadeIn class="max-w-3xl mx-auto text-center">
+      <h2 id="skills-title" class="section-title">{title[lang]}</h2>
+      <p class="text-[var(--text)]/60 mt-2">{subtitle[lang]}</p>
+    </FadeIn>
+    
+    <div class="max-w-4xl mx-auto mt-12 space-y-10">
+      {Object.entries(categories).map(([key, label], categoryIndex) => (
+        <FadeIn delay={categoryIndex * 150} key={key}>
+          <div>
+            <h3 class="font-display font-semibold text-lg mb-4 pb-2 border-b border-[var(--border)]">
+              {label[lang]}
+            </h3>
+            <div class="flex flex-wrap gap-2" role="list" aria-label={label[lang]}>
+              {skills[key as keyof typeof skills].map((skill, skillIndex) => (
+                <span class="chip" key={`${key}-${skillIndex}`} role="listitem">
+                  {skill[lang]}
+                </span>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+      ))}
+    </div>
+  </div>
+</section>

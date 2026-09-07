@@ -1,0 +1,102 @@
+---
+import FadeIn from './FadeIn.tsx';
+import { projects } from '../data/projects';
+
+interface Props {
+  lang: 'pl' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const content = {
+  pl: {
+    greeting: 'Cześć, jestem Adrian',
+    role: 'Full Stack Web Developer',
+    description: 'Projektuję i wdrażam nowoczesne aplikacje internetowe — od interfejsu po backend. Na co dzień pracuję z TypeScript, JavaScript i Pythonem, wykorzystując React, Next.js i Node.js.',
+    driveTitle: 'Co mnie napędza',
+    driveText: 'Nieustanna chęć nauki i dostarczania rozwiązań, które mają mierzalny wpływ. W ostatnim roku zaprojektowałem i wdrożyłem aplikację automatyzującą konwersję czasu urlopów w urzędzie — pełen cykl: od analizy potrzeb po produkcję.',
+    ctaProjects: 'Zobacz projekty',
+    ctaCV: 'Pobierz CV'
+  },
+  en: {
+    greeting: 'Hi, I\'m Adrian',
+    role: 'Full Stack Web Developer',
+    description: 'I design and deploy modern web applications — from interface to backend. Daily I work with TypeScript, JavaScript and Python, using React, Next.js and Node.js.',
+    driveTitle: 'What drives me',
+    driveText: 'Constant desire to learn and deliver solutions with measurable impact. Last year I designed and deployed an application automating leave time conversion for a government office — full cycle: from requirements analysis to production.',
+    ctaProjects: 'View Projects',
+    ctaCV: 'Download CV'
+  }
+};
+
+const t = content[lang];
+---
+
+<section id="home" class="section min-h-[calc(100vh-4rem)] flex items-center" aria-labelledby="hero-title">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Text Content -->
+      <div class="order-2 lg:order-1">
+        <FadeIn delay={100} class="space-y-6">
+          <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+            {t.greeting}
+          </h1>
+          
+          <p class="text-lg md:text-xl text-[var(--text)]/80 max-w-xl">
+            {t.description}
+          </p>
+          
+          <div class="pt-4">
+            <h2 class="text-xl font-display font-semibold mb-2">{t.driveTitle}</h2>
+            <p class="text-[var(--text)]/70">{t.driveText}</p>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="#projects" class="btn btn-primary w-full sm:w-auto">
+              {t.ctaProjects}
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/portfolio/assets/Adrian_Wzorek_CV_pl.pdf" download="Adrian_Wzorek_CV_pl.pdf" class="btn btn-secondary w-full sm:w-auto">
+              {t.ctaCV}
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </a>
+          </div>
+        </FadeIn>
+      </div>
+      
+      <!-- Right: Avatar Card -->
+      <div class="order-1 lg:order-2 flex justify-center">
+        <FadeIn delay={300} class="w-full max-w-xs">
+          <div class="card aspect-square flex flex-col items-center justify-center p-8 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/10 to-transparent" aria-hidden="true"></div>
+            
+            <div class="relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-[var(--accent)]/30 overflow-hidden flex items-center justify-center bg-[var(--bg)]">
+              <img 
+                src="/portfolio/assets/avatar-placeholder.svg" 
+                alt="" 
+                aria-hidden="true"
+                class="w-full h-full object-cover text-[var(--text)]/30"
+              />
+            </div>
+            
+            <div class="mt-6 text-center relative z-10">
+              <h2 class="text-2xl md:text-3xl font-display font-bold">Adrian Wzorek</h2>
+              <p class="text-[var(--accent)] font-medium mt-1">{t.role}</p>
+            </div>
+            
+            <!-- Tech badges -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-wrap gap-2 justify-center z-10">
+              {projects.slice(0, 4).flatMap(p => p.stack.slice(0, 2)).filter((v, i, a) => a.indexOf(v) === i).slice(0, 6).map(tech => (
+                <span class="chip text-xs px-3 py-1">{tech}</span>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </div>
+</section>
