@@ -1,0 +1,138 @@
+@import "./navbar.css";
+@import "./home.css";
+@import "./variable.css";
+@import "./about.css";
+@import "./projects.css";
+@import "./skills.css";
+@import "./cv.css";
+@import "./footer.css";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Joan";
+  interpolate-size: allow-keywords;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  scroll-padding: 5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-white);
+  overflow-x: hidden;
+  padding-inline: var(--main-padding);
+  position: relative;
+  background: linear-gradient(var(--color-first), var(--color-second));
+  background-position: center;
+  background-repeat: repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/svg/Dots.svg");
+    background-size: contain;
+    background-position: center;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-container {
+  padding-inline: calc(var(--main-padding) * -2);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+p {
+  text-shadow: var(--color-black) 0px 0px 5px;
+  font-size: clamp(var(--font-xs), 2svw, var(--font-l));
+  padding-inline: 0.5rem;
+}
+
+h1 {
+  transition: all var(--time-2);
+  text-shadow: 2px 2px 5px var(--color-black);
+  font-size: clamp(var(--font-xs), 4svw, var(--font-xl));
+}
+
+img {
+  width: clamp(10rem, 100%, 35rem);
+  filter: drop-shadow(1px 1px 2px var(--color-white));
+}
+
+.active-header {
+  color: var(--color-first);
+  scale: 1.2;
+}
+
+@keyframes showContentUp {
+  0% {
+    translate: 0 200px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showContentSide {
+  0% {
+    translate: -200px 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.language {
+  position: absolute;
+  top: 2.5rem;
+  left: 0.75rem;
+  width: clamp(2.5rem, 8svw, 5.5rem);
+  animation: showContentSide var(--time-3);
+  & > * {
+    border-radius: 5px;
+  }
+}
+
+.showUp {
+  animation: showContentUp var(--time-3);
+}
+
+.showSide {
+  animation: showContentSide var(--time-3);
+}
+
+section {
+  padding: 2rem;
+  margin-block: 180px;
+  width: 100%;
+  height: auto;
+}
+
+.hide {
+  opacity: 0;
+}
+
+@media (max-width: 750px) {
+  p {
+    padding: 0;
+  }
+  .language {
+    top: 0rem;
+    left: 1%;
+  }
+}
